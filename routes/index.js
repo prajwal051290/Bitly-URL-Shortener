@@ -21,7 +21,7 @@ function login(req, res){
 	
 	console.log("Inside Server's login function...");
 	
-	loginInfo = req.body;
+	/*loginInfo = req.body;
 	url = loginInfo.loginEmail;
 		
 	var encrypPassword = crypto.createHash('sha1').update(url).digest("hex"); // Encrption of Password
@@ -41,7 +41,7 @@ function login(req, res){
 		{
 			console.log("URL Shortened succesfully");
 		}	
-	},queryString);
+	},queryString);*/
 	
 		
 }
