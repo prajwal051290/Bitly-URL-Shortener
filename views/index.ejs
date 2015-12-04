@@ -46,7 +46,7 @@
      };
 	}]);
   	
-  	login.controller('loginController', ['$window', '$scope', '$http',
+  	login.controller('loginController', ['$scope', '$http',
 	function($scope, $http){
 		
 		$scope.shortenURL = function() {
@@ -54,13 +54,7 @@
 			$http.post('http://awseb-e-5-AWSEBLoa-1K6CCY7JNQKCN-461465962.us-west-2.elb.amazonaws.com:80', "Hello World").success(function(response) {
 				alert(response);
 				
-				if (response === RDS Hit!!!){
-				
-					$window.location.href = 'http://www.google.com'; 
-								
-				}
-
-			});
+		});
     	}
 	}]);
   		
