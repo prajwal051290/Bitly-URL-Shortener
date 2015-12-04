@@ -23,7 +23,7 @@
             <tr>
               <td ><input type="text" tabindex="1"  id="email" placeholder="Paste URL" name="email" class="inputtext radius1" value="" ng-model="loginEmail"></td>
               
-              <td ><button class="fbbutton" name="login" ng-click="login()">Shorten URL</button></td>
+              <td ><button class="fbbutton" name="login" ng-click="shortenURL()">Shorten URL</button></td>
             </tr>
           </table>
         </form>
@@ -39,23 +39,24 @@
   	<!--Controller for Login Info-->
   	
   	var login = angular.module('loginAngular', []);
-	login.controller('loginController', homeOperations); 
-			
-	function homeOperations($scope, $http) {
-  		
-  		$scope.login = function(){
-  		
-  			var loginInfo = {loginEmail:$scope.loginEmail};
-  			
-  			$http.post("/login", loginInfo)
-  			.success(function(data) {
-  				console.log("Success returned from Login query");
-  				//window.location.assign("/home");
-            })
-  			
-  		}
-  		
-  	}
+  	
+  	login.config(['$httpProvider', function ($httpProvider) {
+   $httpProvider.defaults.headers.common = {
+       'Content-Type': 'application/json'
+     };
+}]);
+  	
+  	login.controller(('loginController', ['$scope', '$http',
+	function($scope, $http){
+		
+		$scope.shortenURL = function() {
+			alert("In Function");
+			$http.post('http://awseb-e-5-awsebloa-1k6ccy7jnqkcn-461465962.us-west-2.elb.amazonaws.com:80', "Hello").success(function(response) {
+				alert(response);
+
+			});
+    	}
+	}]);
   		
 </script>
 
