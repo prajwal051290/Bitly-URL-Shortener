@@ -41,17 +41,17 @@
   	var login = angular.module('loginAngular', []);
   	
   	login.config(['$httpProvider', function ($httpProvider) {
-   $httpProvider.defaults.headers.common = {
+   	$httpProvider.defaults.headers.common = {
        'Content-Type': 'application/json'
      };
-}]);
+	}]);
   	
   	login.controller('loginController', ['$scope', '$http',
 	function($scope, $http){
 		
 		$scope.shortenURL = function() {
 			alert("In Function");
-			$http.get('https://ec2-52-25-1-7.us-west-2.compute.amazonaws.com').success(function(response) {
+			$http.post('https://default-environment-iyifwemf3a.elasticbeanstalk.com/').success(function(response) {
 				alert(response);
 
 			});
