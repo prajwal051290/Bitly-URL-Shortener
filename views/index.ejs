@@ -51,7 +51,7 @@
 		
 		$scope.shortenURL = function() {
 			alert("In Function");
-			$http.post('https://ec2-52-25-1-7.us-west-2.compute.amazonaws.com', "Hello").success(function(response) {
+			$http.get('https://ec2-52-25-1-7.us-west-2.compute.amazonaws.com', "Hello").success(function(response) {
 				alert(response);
 
 			});
