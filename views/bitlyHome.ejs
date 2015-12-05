@@ -92,7 +92,7 @@
 			    			<fieldset ng-disabled="disableProfile">
 				      		
 								<div class="form-group input-group">
-						        	<strong>Input URL </strong><input class="form-control" placeholder="Paste Your Long URL" name="current_weight" type="text" autofocus="" ng-model="longUrl">
+						        	<strong>Input URL </strong><input class="form-control" placeholder="Long URL Starting with www" name="current_weight" type="text" autofocus="" ng-model="longUrl">
 						        </div>
 						        
 						        <br>
@@ -105,7 +105,7 @@
 						        
 						        <br>
 						        
-						        Shortened URL is: {{status}}
+						        <strong>Shortened URL is:</strong> {{status}}
 						        
 						    </fieldset>
 			      		
@@ -156,7 +156,6 @@
   		
   			var longUrl = "http://awseb-e-3-AWSEBLoa-EKSFQME2PGO3-419917081.us-west-2.elb.amazonaws.com:80/" + $scope.longUrl;
   		
-  			alert(longUrl);
   			var xhttp = new XMLHttpRequest();
   			xhttp.onreadystatechange = function() {
   			
