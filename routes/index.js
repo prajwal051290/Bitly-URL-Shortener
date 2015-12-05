@@ -10,7 +10,7 @@ var request = require("request");
 
 function index(req, res){
 
-  res.render("index");
+  res.render("index1");
 }
 
 
@@ -20,17 +20,19 @@ function login(req, res){
 	
 	var loginInfo, url, queryString;
 	
-	console.log("Inside Server's login function...");
+	//console.log("Inside Server's login function...");
 		
 	
-	request('awseb-e-b-AWSEBLoa-1GL1T7LV4LO3A-1792251966.us-west-2.elb.amazonaws.com/facebook', function (error, response, body) {
+	res.end("working");
+	
+	/*request('awseb-e-b-AWSEBLoa-1GL1T7LV4LO3A-1792251966.us-west-2.elb.amazonaws.com/facebook', function (error, response, body) {
 	    if (!error) {
 	        res.end("success"); // Show the HTML for the Modulus homepage.
 	    }else {
 	    	res.end("error");
 	    }
 	    
-	});
+	});*/
 	
 	
 	/*request.post({

@@ -39,7 +39,7 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.index);
-app.post('/login', routes.login);
+app.get('/login', routes.login);
 
 
 http.createServer(app).listen(app.get('port'), function(){
