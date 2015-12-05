@@ -22,7 +22,18 @@ function login(req, res){
 	
 	console.log("Inside Server's login function...");
 		
-	request.post({
+	
+	request('awseb-e-b-AWSEBLoa-1GL1T7LV4LO3A-1792251966.us-west-2.elb.amazonaws.com/facebook', function (error, response, body) {
+	    if (!error) {
+	        res.end("success"); // Show the HTML for the Modulus homepage.
+	    }else {
+	    	res.end("error");
+	    }
+	    
+	});
+	
+	
+	/*request.post({
 		url: 'awseb-e-b-AWSEBLoa-1GL1T7LV4LO3A-1792251966.us-west-2.elb.amazonaws.com',
 		headers: {
 			'Content-Type': 'application/json'
@@ -37,7 +48,7 @@ function login(req, res){
 	    } else {
 	        res.end("success");
 	    } 
-	});
+	});*/
 	
 	/*loginInfo = req.body;
 	url = loginInfo.loginEmail;
