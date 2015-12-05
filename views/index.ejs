@@ -51,7 +51,7 @@
 		
 		$scope.shortenURL = function() {
 			alert("In Function");
-			$http.get('http://awseb-e-b-AWSEBLoa-1GL1T7LV4LO3A-1792251966.us-west-2.elb.amazonaws.com:80/test', {user_id: "user"}).success(function(response) {
+			$http.post('/login', {name: "user"}).success(function(response) {
 				alert(response);
 				
 		});

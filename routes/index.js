@@ -6,6 +6,7 @@
 var queryExec = require("./queryExecutor");
 var ejs = require("ejs");
 var crypto = require('crypto');
+var request = require("request");
 
 function index(req, res){
 
@@ -20,6 +21,23 @@ function login(req, res){
 	var loginInfo, url, queryString;
 	
 	console.log("Inside Server's login function...");
+	
+	
+	request.post({
+		url: 'awseb-e-b-AWSEBLoa-1GL1T7LV4LO3A-1792251966.us-west-2.elb.amazonaws.com',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({
+			"longURL": req.body.name
+		})
+	}, function(error, response, body){
+		if(error) {
+			res.end("error");
+	    } else {
+	        res.end("success");
+	    } 
+	});
 	
 	/*loginInfo = req.body;
 	url = loginInfo.loginEmail;
