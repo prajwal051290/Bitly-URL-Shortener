@@ -10,7 +10,7 @@ var request = require("request");
 
 function index(req, res){
 
-  res.render("index");
+  res.render("index1");
 }
 
 
