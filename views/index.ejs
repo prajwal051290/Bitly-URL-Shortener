@@ -50,9 +50,10 @@
 	function($scope, $http){
 		
 		$scope.shortenURL = function() {
-			alert($scope.loginEmail);
+			
 			alert("In Function");
 			$http.post('http://awseb-e-3-AWSEBLoa-EKSFQME2PGO3-419917081.us-west-2.elb.amazonaws.com:80', {name: "user"}).success(function(response) {
+				alert("Success");
 				alert(response);
 				
 		});
