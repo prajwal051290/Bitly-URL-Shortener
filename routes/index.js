@@ -14,6 +14,12 @@ function index(req, res){
 }
 
 
+function graph(req, res){
+
+	  res.render("graph");
+	}
+
+
 //This function logs user in facebook.
 
 function login(req, res){
@@ -78,4 +84,6 @@ function login(req, res){
 }
 
 exports.index=index;
+exports.graph=graph;
+
 exports.login=login;

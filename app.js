@@ -39,6 +39,8 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.index);
+app.get('/graph', routes.graph);
+
 app.get('/login', routes.login);
 
 
