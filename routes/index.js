@@ -21,8 +21,7 @@ function login(req, res){
 	var loginInfo, url, queryString;
 	
 	console.log("Inside Server's login function...");
-	
-	
+		
 	request.post({
 		url: 'awseb-e-b-AWSEBLoa-1GL1T7LV4LO3A-1792251966.us-west-2.elb.amazonaws.com',
 		headers: {
@@ -33,6 +32,7 @@ function login(req, res){
 		})
 	}, function(error, response, body){
 		if(error) {
+			console.log(error);
 			res.end("error");
 	    } else {
 	        res.end("success");
